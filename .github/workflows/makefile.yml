@@ -31,7 +31,8 @@ jobs:
       uses: actions/cache/restore@v4
       with:
         path: |
-          Build*/
+          /home/runner/work/UnofficialOS/UnofficialOS/build.UnofficialOS-RK3326.arm/
+          /home/runner/work/UnofficialOS/UnofficialOS/build.UnofficialOS-RK3326.aarch64/
         key: ${{ runner.os }}-cache
 
     - name: make docker-RK3326
@@ -51,6 +52,7 @@ jobs:
       uses: actions/cache/save@v4
       with:
         path: |
-          Build*/
+          /home/runner/work/UnofficialOS/UnofficialOS/build.UnofficialOS-RK3326.arm/
+          /home/runner/work/UnofficialOS/UnofficialOS/build.UnofficialOS-RK3326.aarch64/
         key: ${{ steps.cache-restore.outputs.cache-primary-key }}
         save-always: true
