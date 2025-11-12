@@ -12,6 +12,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+
+    - name: Set up Docker
+      uses: docker/setup-docker-action@v4
+    
     - uses: actions/checkout@v4
 
     - name: Apt Update
