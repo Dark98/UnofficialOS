@@ -39,15 +39,19 @@ jobs:
       run: make docker-RK3326
 
     - name: make docker-RK3326 Attempt 2
+      if: failure()
       run: make docker-RK3326
 
     - name: make docker-RK3326 Attempt 3
+      if: failure()
       run: make docker-RK3326
 
     - name: make docker-RK3326 Attempt 4
+      if: failure()
       run: make docker-RK3326
 
     - name: Save Cache
+      if: always()
       id: cache-save
       uses: actions/cache/save@v4
       with:
